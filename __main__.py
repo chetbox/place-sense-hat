@@ -83,6 +83,8 @@ def main():
         global canvas
         try:
             canvas = get_canvas()
+        except KeyboardInterrupt as error:
+            raise error
         except:
             print('Error:', sys.exc_info()[0])    
 
